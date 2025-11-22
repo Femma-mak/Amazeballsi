@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazeballsi - Original Oddities & Dark Art</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* Pure Black Background */
+        }
+        .header-bg {
+            /* Black to Yellow Gradient - sharper transition */
+            background-image: linear-gradient(135deg, #000000 30%, #FBBF24 100%); 
+        }
+
+        /* --- CUSTOM GLOW EFFECTS FOR QUIRKY INTENSITY --- */
+        /* Radioactive glow/shadow for product cards on hover */
+        .card-glow:hover {
+            /* Intense, electric yellow glow */
+            box-shadow: 0 0 40px rgba(251, 191, 36, 1.0), 0 0 20px rgba(251, 191, 36, 0.7); 
+            border-color: #FBBF24; /* Make the border solid yellow on hover */
+        }
+        /* Stronger, "Toxic" glow for primary CTA button */
+        .button-glow-strong:hover {
+            box-shadow: 0 0 30px rgba(251, 191, 36, 1.2);
+            background-color: #FBBF24; /* Solid yellow background on hover */
+        }
+        /* Custom class for the dark background color, close to black */
+        .bg-dark {
+            background-color: #1a1a1a;
+        }
+        /* Style for the button background */
+        .btn-bg {
+             background-color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+
+    <!-- Navigation Bar - Sharper Edges -->
+    <nav class="bg-black shadow-2xl sticky top-0 z-10 border-b-4 border-yellow-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo and Text Brand Name (Now displayed on all screen sizes) -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center hover:opacity-90 transition duration-150">
+                        <!-- Logo image -->
+                        <img src="image_267c45.png" alt="Amazeballsi Logo - Quirky Dark Art" class="h-10 w-auto" />
+                        <!-- Text name (now always visible) -->
+                        <span class="text-2xl font-extrabold text-yellow-500 tracking-wider ml-2 inline">
+                            AMAZEBALLSI
+                        </span>
+                    </a>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#merch" class="inline-flex items-center px-1 pt-1 text-sm font-bold text-yellow-100 border-b-2 border-transparent hover:border-yellow-400 transition duration-150 ease-in-out">
+                        Odd Merch
+                    </a>
+                    <a href="#custom" class="inline-flex items-center px-1 pt-1 text-sm font-bold text-yellow-100 border-b-2 border-transparent hover:border-yellow-400 transition duration-150 ease-in-out">
+                        Custom Oddities
+                    </a>
+                    <a href="#contact" class="inline-flex items-center px-1 pt-1 text-sm font-bold text-yellow-100 border-b-2 border-transparent hover:border-yellow-400 transition duration-150 ease-in-out">
+                        The Secret Lab
+                    </a>
+                </div>
+                <!-- Mobile Menu Button (Hamburger) -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 text-yellow-300 hover:text-yellow-500 hover:bg-black focus:outline-none focus:ring-4 focus:ring-yellow-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1 bg-dark border-t border-yellow-500">
+                <a href="#merch" class="block pl-3 pr-4 py-2 border-l-4 border-yellow-500 text-base font-bold text-yellow-500 bg-black">Odd Merch</a>
+                <a href="#custom" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-bold text-yellow-100 hover:bg-black hover:border-yellow-400">Custom Oddities</a>
+                <a href="#contact" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-bold text-yellow-100 hover:bg-black hover:border-yellow-400">The Secret Lab</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section - Aggressive Text -->
+    <header id="home" class="header-bg py-20 md:py-32 text-white shadow-2xl border-b-8 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- HEADING -->
+            <h1 class="text-5xl md:text-8xl font-black mb-4 drop-shadow-lg text-yellow-500 uppercase">
+                Your Demons Deserve Better Art.
+            </h1>
+            <!-- SUBTITLE: Changed 'customized nightmares' to 'custom visions' -->
+            <p class="text-xl md:text-3xl font-extrabold mb-8 max-w-4xl mx-auto text-yellow-100">
+                We specialize in **custom visions**, bespoke eccentricities, and truly unique merch for the delightfully unconventional.
+            </p>
+            <!-- CTA: Replaced 'Void' -->
+            <a href="#merch" class="inline-block btn-bg text-yellow-500 font-black py-4 px-10 shadow-2xl hover:text-black transition duration-300 transform hover:scale-105 border-4 border-yellow-500 button-glow-strong">
+                Explore the Unusual
+            </a>
+        </div>
+    </header>
+
+    <!-- Merchandise Section - Sharp Cards -->
+    <section id="merch" class="py-16 md:py-24 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Title: Replaced 'Dark' -->
+            <h2 class="text-4xl font-black text-yellow-500 text-center mb-12 uppercase border-b-2 pb-2 border-yellow-500/50">
+                Our Quirky Art & Merch
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Product Card: T-Shirts -->
+                <div class="bg-black shadow-2xl overflow-hidden transform hover:scale-[1.05] transition duration-500 border-4 border-yellow-500/50 card-glow">
+                    <img src="https://placehold.co/600x400/000000/FBBF24?text=Silkscreened+Sin" alt="Original Art T-Shirts" class="w-full h-64 object-cover border-b-2 border-yellow-500/70">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-black text-yellow-400 mb-2">Silkscreened Sin</h3>
+                        <p class="text-yellow-100 mb-4 font-medium">
+                            These tees capture the soul of the void and wear like a dream (or a fever pitch). Limited run.
+                        </p>
+                        <span class="inline-block bg-yellow-500 text-black text-lg font-bold py-1 px-4 shadow-md border-2 border-black">
+                            $25.99 | Ready to Ship
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Product Card: Wall Paintings -->
+                <div class="bg-black shadow-2xl overflow-hidden transform hover:scale-[1.05] transition duration-500 border-4 border-yellow-500/50 card-glow">
+                    <img src="https://placehold.co/600x400/000000/FBBF24?text=Canvas+Oddity" alt="Original Wall Paintings/Prints" class="w-full h-64 object-cover border-b-2 border-yellow-500/70">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-black text-yellow-400 mb-2">Wall Oddities</h3>
+                        <p class="text-yellow-100 mb-4 font-medium">
+                            Original canvases to haunt your living space. Warning: May cause spontaneous introspection.
+                        </p>
+                        <span class="inline-block bg-black text-yellow-500 border-4 border-yellow-500 text-lg font-bold py-1 px-4 shadow-md">
+                            $49.00 | Hand Painted
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Product Card: Custom Bookings -->
+                <div id="custom" class="bg-black shadow-2xl overflow-hidden transform hover:scale-[1.05] transition duration-500 border-4 border-yellow-500/50 card-glow">
+                    <img src="https://placehold.co/600x400/000000/FBBF24?text=Custom+Nightmares" alt="Artistic Bookmarks" class="w-full h-64 object-cover border-b-2 border-yellow-500/70">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-black text-yellow-400 mb-2">Bespoke Abominations</h3>
+                        <p class="text-yellow-100 mb-4 font-medium">
+                            Got a weird idea? A fever dream? We'll bring your custom darkness to life on canvas or merch.
+                        </p>
+                        <span class="inline-block bg-yellow-500 text-black text-lg font-bold py-1 px-4 shadow-md border-2 border-black">
+                            START A PROJECT
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- CTA: Replaced 'Shady' -->
+            <div class="text-center mt-16">
+                <a href="#custom" class="inline-block bg-yellow-500 text-black font-black py-4 px-10 shadow-lg hover:bg-yellow-400 transition duration-300 button-glow-strong border-4 border-black uppercase">
+                    Hire the Quirky Artist
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About The Artist Section - Black background for max contrast -->
+    <section id="about" class="py-16 md:py-24 bg-black border-t-4 border-b-4 border-yellow-500/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <!-- Artist Image/Placeholder -->
+                <div class="mb-8 lg:mb-0">
+                    <img src="https://placehold.co/500x500/000000/FBBF24?text=Femma,+The+Creator" alt="Femma, The Creator of Chaos" class="w-full h-full object-cover shadow-2xl max-w-sm mx-auto lg:max-w-none border-8 border-yellow-500 transform hover:scale-105 transition duration-500">
+                </div>
+
+                <!-- About Content -->
+                <div>
+                    <h2 class="text-4xl font-black text-yellow-500 mb-6 uppercase">
+                        Meet the Creator of Chaos
+                    </h2>
+                    <p class="text-lg text-yellow-100 mb-4 leading-relaxed font-semibold">
+                        I'm **Fatima, also known as Femma,** and I run the Amazeballsi laboratory. I create art that delves into your deepest **hidden truths** and the things you only whisper to yourself. My work captures the raw, intimate edge of unconventional desires.
+                    </p>
+                    <!-- Replaced 'dark' -->
+                    <p class="text-lg text-yellow-100 mb-6 leading-relaxed font-semibold">
+                        If it's too **strange** for polite company, you've come to the right place. Don't be afraid to ask for something truly unhinged—that's what I live for.
+                    </p>
+                    <!-- Replaced 'Shady' -->
+                    <a href="#contact" class="text-yellow-500 font-black hover:text-yellow-400 transition duration-300 flex items-center uppercase">
+                        Venture into the Secret Lab
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section - Minimalist and Stark -->
+    <footer id="contact" class="bg-dark text-white py-16 border-t-4 border-yellow-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Brand Info -->
+                <div>
+                    <h4 class="text-2xl font-black text-yellow-400 mb-3 uppercase">The Lab</h4>
+                    <p class="text-yellow-200 text-sm font-semibold">
+                        Original oddities and existential merchandise. Support the unusual.
+                    </p>
+                    <div class="mt-4 flex space-x-4 justify-center md:justify-start">
+                        <!-- Placeholder Icons for Social Media -->
+                        <a href="#" class="text-yellow-300 hover:text-yellow-500 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.238 2.583 7.822 6.273 9.273v-6.526H5.735v-2.747h2.538V9.75c0-2.515 1.528-3.896 3.79-3.896 1.077 0 2.193.193 2.193.193v2.42h-1.24c-1.206 0-1.583.75-1.583 1.536v1.851h2.723l-.434 2.747h-2.29V21.273C19.417 19.822 22 16.238 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        </a>
+                        <a href="#" class="text-yellow-300 hover:text-yellow-500 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.606 13.918c-.4.814-1.206 1.34-2.172 1.34-1.465 0-2.65-1.096-2.65-2.457 0-1.36 1.185-2.456 2.65-2.456.966 0 1.772.526 2.172 1.34l-.066.07-.024-.038c-.14-.233-.55-.716-1.042-1.055-.494-.338-1.096-.456-1.464-.456-.78 0-1.42.59-1.42 1.326 0 .734.64 1.325 1.42 1.325.368 0 .97-.118 1.464-.456.492-.339.902-.822 1.042-1.055l.024-.038.066.07z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-black text-yellow-100 mb-3 uppercase">Inventory</h4>
+                    <ul class="space-y-2 text-yellow-200 text-sm font-semibold">
+                        <li><a href="#merch" class="hover:text-yellow-400 transition duration-300">Silkscreened Sin (Tees)</a></li>
+                        <li><a href="#merch" class="hover:text-yellow-400 transition duration-300">Wall Oddities (Canvas)</a></li>
+                        <li><a href="#custom" class="hover:text-yellow-400 transition duration-300">Bespoke Abominations</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition duration-300">Disclaimers & Rituals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-black text-yellow-100 mb-3 uppercase">Summon Us</h4>
+                    <p class="text-yellow-200 text-sm mb-2 font-semibold">
+                        Email: <a href="mailto:art@amazeballsi.com" class="hover:text-yellow-400 transition duration-300">art@amazeballsi.com</a>
+                    </p>
+                    <p class="text-yellow-200 text-sm font-semibold">
+                        Location: Somewhere darkly lit.
+                    </p>
+                    <div class="mt-4">
+                        <button class="bg-yellow-500 text-black font-black py-2 px-4 shadow-lg hover:bg-yellow-400 transition duration-300 border-2 border-black uppercase">
+                            Open the Channel
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-yellow-700 mt-8 pt-8 text-center">
+                <p class="text-sm text-yellow-300">
+                    &copy; 2025 Amazeballsi. All nightmares are protected.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+
+            // Toggle visibility
+            mobileMenu.classList.toggle('hidden');
+            // Toggle aria attribute for accessibility
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuButton = document.getElementById('mobile-menu-button');
+                
+                // Hide menu
+                mobileMenu.classList.add('hidden');
+                // Update button state
+                menuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+</html>
